@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// Array
@@ -32,7 +34,8 @@ func main() {
 	countries := [...]string{"VietNam", "China", "UK", "France"}
 
 	/*
-		- khi ta gán các giá trị của biến 'countries' cho 'copyCountries' thì biến 'copyCountries' sẽ tự tạo ra 1 vùng nhớ riêng biệt với biến 'countries'. Cho nên dù 'copyContries' có thay đổi gì trong array cũng không làm ảnh hưởng đến biến 'countries'.
+		- khi ta gán các giá trị của biến 'countries' cho 'copyCountries' thì biến 'copyCountries' sẽ tự tạo ra 1 vùng nhớ riêng biệt với biến 'countries'.
+		Cho nên dù 'copyContries' có thay đổi gì trong array cũng không làm ảnh hưởng đến biến 'countries'.
 	*/
 	copyCountries := countries
 
@@ -52,5 +55,21 @@ func main() {
 		fmt.Println()
 	}
 
-	// Slice
+	// mảng 2 chiều [row][column]
+	matrix := [4][2]int{
+		{1, 2},
+		{1, 2},
+		{3, 5},
+		{6, 7},
+	}
+	fmt.Println(matrix)
+
+	// Loop mảng 2 chiều
+	for i := 0; i < 4; i++ {
+		for j := 0; j < 2; j++ {
+			fmt.Print(matrix[i][j], " ")
+		}
+		fmt.Println()
+	}
+
 }
