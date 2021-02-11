@@ -4,7 +4,7 @@ import "fmt"
 
 type People struct {
 	name string
-	age int
+	age  int
 }
 
 // Thừa kế từ 1 Struct
@@ -32,12 +32,12 @@ func structTypes() {
 	fmt.Println(studentYub)
 
 	// khời tạo Object dựa trên Struct
-	studentA := Student{
-		mssv:     3,
-		name:     "Evan",
-		gender:   true,
-		subjects: []string{"Toan", "Vat Ly", "Sinh hoc"},
-	}
+	studentA := Student{}
+	studentA.name = "Evan"
+	studentA.age = 12
+	studentA.mssv = 1
+	studentA.gender = true
+
 	fmt.Println(studentA) // {3 Evan true [Toan Vat Ly Sinh hoc]}
 
 	// truy xuất value trong Object (giống cách trong JS)
@@ -48,6 +48,5 @@ func structTypes() {
 
 	// Copy
 	// biến copy từ 1 struct sẽ tự tạo ra 1 vùng nhớ mới, không ảnh hưởng struct được copy.
-
 
 }
