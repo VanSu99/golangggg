@@ -82,8 +82,26 @@ func slice() {
 	fmt.Println("Cars slice: ", mySlice9)
 
 	// dùng append để thêm 1 array vào Slice -> dùng kèm với dấu ...
-
 	mySlice14 := append(mySlice8, []string{"A", "B", "C"}...)
 	fmt.Println("Cars slice with array: ", mySlice14)
+
+	/*
+		- Có thể dùng Slice để thao tác các CTDL: Stack và Queue
+		- Thực hiện Pop, Push thông qua syntax: [start:end-1]
+		- Yêu cầu hiểu về Stack và Queue
+	*/
+	// Stack - LIFO
+	stackA := []int{1, 2, 3, 4, 5, 6}
+	stackB := stackA[:5] // bóc item 6 ra trước
+	fmt.Println("Stack LIFO: ", stackB)
+
+	// Queue - FIFO
+	stackC := stackA[1:] // bóc item 1 ra trước
+	fmt.Println("Queue FIFO: ", stackC)
+
+	// Thao tác với item ở giữa
+	stackD := []int{1, 2, 3, 4, 5, 6}
+	stackE := append(stackD[:2], stackD[3:]...)
+	fmt.Println(stackE) // [1,2,4,5,6]
 
 }
