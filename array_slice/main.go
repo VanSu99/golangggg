@@ -50,6 +50,7 @@ func main() {
 	}
 
 	// cách 2:
+	// range sẽ return index và phần tử của array
 	for index, value := range countries {
 		fmt.Printf("i=%d value=%s", index, value)
 		fmt.Println()
